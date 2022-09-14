@@ -1,0 +1,215 @@
+.carousel-inner img{
+	height: 100%;
+}
+.carousel-item{
+	height: 75vh;
+}
+.col-lg-4 img{
+   height: 150px;
+   width: 150px;
+}
+.col-lg-4{
+	text-align: center;
+}
+.row{
+	margin-top: 30px !important;
+}
+
+.icona{
+	width: 50%;
+	height: 50%;
+}
+
+.dark-mode {
+	background-color: black;
+	color: white;
+  }
+
+
+  .switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+  }
+  
+  .switch input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+  }
+
+  .slider.round {
+	border-radius: 34px;
+  }
+  
+  .slider.round:before {
+	border-radius: 50%;
+  }
+
+  .switch{
+	align-items: center;
+  }
+
+  #searchBar {
+	align-items: center;
+	top: 355px;
+	left: 575px;
+
+}
+
+  #searchBar input {
+	height: 30px;
+	width: 50px;
+}
+.btn-outline-primary{
+	align-items: right;
+}
+
+
+/* resize delle immagini con tag immagine del carosello */
+#immagine{
+	object-fit: cover;
+}
+
+.blur-text {
+	backdrop-filter: blur(5px);
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+	top: 10%;
+	right: 50%;
+	color:black;
+	
+  }
+
+  #icona{
+	width: 50%;
+	height: 50%;
+	vertical-align:bottom;
+
+  }
+
+  .results-list ul {
+	background-color: white;
+  }
+
+  .results-list li{
+	list-style: none;
+	padding: 8px 12px;
+	width: 100%;
+	cursor: default;
+	border-radius: 3px;
+	background-color: white;
+	text-decoration: none;
+	
+  }
+  a{
+	text-decoration: none;
+	color: black;
+  }
+
+  .results-list li:hover{
+	background: #efefef;
+  }
+
+  /* card previsioni 7 giorni */
+  .card{
+	background-color: #2196F3;
+  }
+
+  /* tasto preferiti */
+  
+ /* stile per current data */
+ .previsioni td {
+          
+	border: solid 1px #000000;
+  }
+
+  .icon{
+	height:100%;
+	width: 100%;
+  }
+  div.scroll {
+	background-color: #333;
+	overflow-x: auto;
+	white-space: nowrap;
+   
+  }
+  div.hour{
+	
+	
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+  }
+
+  /* stile per index immagini carosello index.html */
+  .bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+  }
+
+  @media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+	  font-size: 3.5rem;
+	}
+  }
+
+  div .card {
+	padding-top: 2em;
+  }
+
+  div .forecast-summary{
+	padding-top: 3em;
+  }
+
+  h5 .header{
+	color: green;
+  }
+
+  h1#titolo{
+	text-align: center;
+  }

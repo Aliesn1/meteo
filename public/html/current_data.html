@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Meteo corrente</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    <!-- libreria per l'inclusione di pagine html-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type=text/css href="../CSS/stile.css">
+    
+  
+  </head>
+
+<body>
+        
+    <!--navbar -->
+    
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="cronologia.html">Cronologia</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" id="searchBar" type="text"  placeholder="Città" aria-label="Search" data-search>
+          <button class="btn btn-outline-success" type="submit">Cerca</button>
+          <div class="results-container">
+            <ul class="results-list" id="list">
+     
+            </ul>
+         </div>
+        </form>
+      </div>
+    </div>
+    
+    <div>
+      <label class="switch" >
+        <input id = "mode" type="checkbox" onchange="myFunction()">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+  
+
+    <main>
+        
+
+      
+
+
+    <div class=" next-24-hours">
+     
+
+      <div class="forecast-summary">
+        <h1 id="titolo"></h1>
+        <h2>Prossime 24 ore</h2>
+      </div>
+    
+      <div class="scroll">
+        <div class="hourly">
+          <div class="hour">
+            <time>13:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">28&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>14:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">27&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>15:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">27&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>16:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">27&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>17:00</time>
+             <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">27&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>18:00</time>
+             <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">26&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>19:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">25&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>20:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">24&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>21:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">24&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>22:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">24&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>23:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">24&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>00:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">23&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>01:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">23&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>02:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">23&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>03:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">22&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>04:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">22&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>05:00</time>
+             <div class="icon">
+              <img alt="non disponibile">
+            </div><div class="temp">22&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>06:00</time>
+             <div class="icon">
+              <img alt="non disponibile">
+            </div><div class="temp">21&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>07:00</time>
+             <div class="icon">
+              <img alt="non disponibile">
+            </div><div class="temp">21&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>08:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">21&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>09:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">22&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>10:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">23&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>11:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">24&deg;C</div>
+            <div class="desc"></div>
+          </div>
+          <div class="hour">
+            <time>12:00</time>
+            <div class="icon">
+              <img alt="non disponibile">
+            </div>
+            <div class="temp">25&deg;C</div>
+            <div class="desc"></div>
+          </div>
+        </div> 
+      </div>
+    
+    </div>
+
+  
+
+    
+   
+      
+    
+    <h2>Prossimi 7 giorni</h2>
+      <table id="previsioni" class="table table-dark table-striped" >
+      <tr>
+        <th>Giorno</th>
+        <th>Alba</th>
+        <th>Tramonto</th>
+        <th>Massima/Minima</th>
+        <th>Umidità</th>
+        <th>Descrizione</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+  
+      </table>
+      
+      
+
+
+
+
+    </main>
+    
+   
+    <script  src="../java/salva_preferenza.js"></script>
+    <script  src="../java/search_bar.js"></script>
+    <script  src="../java/script.js"></script>
+    <script type="module" src="../java/worker.js"></script>
+    
+    <script>
+        //ricerco nella url i parametri passatyi in get
+        var currentUrl = new URL(window.location.href);
+        console.log(currentUrl);
+        var q = currentUrl.searchParams.get('q'); //recupero il parametro passato in get
+        var lat = currentUrl.searchParams.get('lat');
+        var lon = currentUrl.searchParams.get('lon');
+        var name = currentUrl.searchParams.get('nm');
+        console.log(q);
+        var b =  document.getElementById('titolo');
+        
+        if(q!=0){
+          //parso i dati di cache
+        var a = JSON.parse(sessionStorage.cities);
+        //chiedo le previsioni con le coordinate
+        sevenDays(a[q-1].lat, a[q-1].lon);
+
+        
+        b.innerText="Previsioni meteo per "+a[q-1].name;
+        cronoJson(document.cookie.split('=')[1],a[q-1].name);
+
+        }
+        else{
+          b.innerText="Previsioni meteo per "+ name;
+          sevenDays(lat, lon);
+          cronoJson(document.cookie.split('=')[1],name);
+        }
+        
+    </script>
+
+    
+    
+
+
+</body>
+
