@@ -48,7 +48,7 @@ async function getWeather(){
     
     
 
-    fetch("https://api.openweathermap.org/data/2.5/weather?q="+citta.città.innerText+",IT&units=metric&appid=76e2d868b4ae833b81c92469dd1da088&lang=it", {
+    fetch("https://api.openweathermap.org/data/2.5/weather?q="+citta.città.innerText+",IT&units=metric&appid={Your_api_key}&lang=it", {
         method:'GET',
     });
 
@@ -86,7 +86,7 @@ async function getWeather(){
 //funzione per le immagini da unsplash
 const getImage = (citta) =>{
     
-    sendHttpRequest('GET',"https://api.unsplash.com/search/photos?query="+citta.città.innerText+"&client_id=y5Qk2ZeEgpaEEiSqc_2VJ7XBzRvpp5yo1XhR72y5Esw").then(response =>{
+    sendHttpRequest('GET',"https://api.unsplash.com/search/photos?query="+citta.città.innerText+"&client_id={Your_api_key}").then(response =>{
 
         const data = response;
         citta.immagine.src= data.results[0].urls.full;
@@ -99,7 +99,7 @@ const sevenDays = (lat, lon) => {
 
     
     
-    sendHttpRequest('GET',"https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&exclude=minutely&appid=76e2d868b4ae833b81c92469dd1da088&lang=it").then(response =>{
+    sendHttpRequest('GET',"https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&exclude=minutely&appid={Your_api_key}&lang=it").then(response =>{
         const jsonObj = response;
         var table = document.getElementById("previsioni");
         var j=0;
@@ -305,7 +305,7 @@ window.onload = (event) =>{
                 console.log(card.getElementsByTagName('a')[0]);
                 
 
-                sendHttpRequest('GET',"https://api.openweathermap.org/data/2.5/weather?q="+app[j]+",IT&units=metric&appid=76e2d868b4ae833b81c92469dd1da088&lang=it").then(response =>{
+                sendHttpRequest('GET',"https://api.openweathermap.org/data/2.5/weather?q="+app[j]+",IT&units=metric&appid={Your_api_key}&lang=it").then(response =>{
                 const jsonObj = response;
                 header.textContent = jsonObj.name;
                     
